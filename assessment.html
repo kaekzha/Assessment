@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Assessment</title>
+    </head>
+  <body>
+    <table border=1px align="center">
+      <tr>
+        <td style="text-align: center; font-weight: bold">Category</td>
+        <td style="text-align: center; font-weight: bold">Value</td>
+        </tr>
+      <tr>
+          <td style="text-align: center">Alpha</td>
+          <td style="text-align: center" id="alphaFormula"></td></tr>
+      <tr>
+          <td style="text-align: center">Beta</td>
+          <td style="text-align: center" id="betaFormula"></td></tr>
+      <tr>
+          <td style="text-align: center">Charlie</td>
+          <td style="text-align: center" id="charlieFormula"></td></tr>
+      </table>
+    <div style="text-align: center; margin-top: 10px;">
+      <label>Table 1</table><br></br>
+      </div>
+    
+    <table border=1px align="center">
+      <tr>
+        <td style="text-align: center; font-weight: bold">Category</td>
+        <td style="text-align: center; font-weight: bold">Value</td>
+        </tr>
+      <tr>
+          <td style="text-align: center">Alpha</td>
+          <td style="text-align: center" id="alphaValue"></td></tr>
+      <tr>
+          <td style="text-align: center">Beta</td>
+          <td style="text-align: center" id="betaValue"></td></tr>
+      <tr>
+          <td style="text-align: center">Charlie</td>
+          <td style="text-align: center" id="charlieValue"></td></tr>
+      </table>
+    <div style="text-align: center; margin-top: 10px;">
+      <label>Table 2</table>
+      </div>
+    </body>
+  </html>
+
+<style>
+  table{
+    width: 75%;
+    margin: 0 auto;
+  }
+  td{
+    padding: 7px;
+  }
+  </style>
+
+<script type="text/javascript">
+  window.onload = function(){
+    
+    //define value
+    var A5 = 2;
+    var A7 = 5;
+    var A12 = 3;
+    var A13 = 90;
+    var A15 = 80;
+    var A20 = 28;
+    
+    //calc value
+    var alphaValue = A5 + A20;
+    var betaValue = A15 / A7;
+    var charlieValue = A13 * A12;
+    
+    
+    //display formula for table 1
+    document.getElementById("alphaFormula").innerHTML = "A5 + A20";
+    document.getElementById("betaFormula").innerHTML = "A15 / A7";
+    document.getElementById("charlieFormula").innerHTML = "A13 * A12";  
+      
+    document.getElementById("alphaValue").innerHTML = alphaValue;
+    document.getElementById("betaValue").innerHTML = betaValue.toFixed(2);
+    document.getElementById("charlieValue").innerHTML = charlieValue;  
+  }
+  </script>
